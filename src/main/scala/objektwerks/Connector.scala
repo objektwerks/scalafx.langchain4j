@@ -14,4 +14,6 @@ final class Connector(apiKey: String, modelName: String):
     .logResponses(true)
     .build()
 
-  def send(request: String): String = model.chat(request)
+  def send(topic: String): String =
+    val request = s"Tell me about this beer, $topic"
+    model.chat(request)
