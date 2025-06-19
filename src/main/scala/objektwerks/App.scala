@@ -13,10 +13,7 @@ object App extends JFXApp3 with LazyLogging:
   logger.info("Starting app ...")
 
   val context = Context(ConfigFactory.load("app.conf"))
-  val connector = Connector(
-    apiKey = sys.env("OPENAI_API_KEY"),
-    modelName = context.connectorModelName
-  )
+  val connector = Connector(context)
 
   override def start(): Unit =
     stage = new JFXApp3.PrimaryStage:
