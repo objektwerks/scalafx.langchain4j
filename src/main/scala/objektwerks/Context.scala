@@ -2,7 +2,7 @@ package objektwerks
 
 import com.typesafe.config.Config
 
-import scalafx.scene.image.{Image, ImageView}
+import scalafx.scene.image.Image
 
 final class Context(config: Config):
   val windowTitle = config.getString("window.title")
@@ -17,10 +17,3 @@ final class Context(config: Config):
   val menuExit = config.getString("menu.exit")
 
   def imageAppIcon: Image = Image(Image.getClass.getResourceAsStream("/image/icon.png"))
-
-  private def loadImageView(path: String): ImageView = new ImageView:
-    image = Image(Image.getClass.getResourceAsStream(path))
-    fitHeight = 22
-    fitWidth = 22
-    preserveRatio = true
-    smooth = true
