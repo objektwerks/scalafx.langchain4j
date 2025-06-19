@@ -4,11 +4,11 @@ import dev.langchain4j.model.openai.OpenAiChatModel
 
 import java.time.Duration
 
-final class Connector(apiKey: String, modelName: String):
+final class Connector(context: Context):
   private val model = OpenAiChatModel
     .builder()
-    .apiKey(apiKey)
-    .modelName(modelName)
+    .apiKey(context.connectorApiKey)
+    .modelName(context.connectorModelName)
     .timeout(Duration.ofSeconds(30))
     .logRequests(true)
     .logResponses(true)
