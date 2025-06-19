@@ -4,10 +4,10 @@ import scalafx.geometry.Insets
 import scalafx.scene.Scene
 import scalafx.scene.layout.VBox
 
-final class View(context: Context, connector: Connector):
-  println(connector)
-  
+final class View(context: Context, connector: Connector): 
   val menu = Menu(context)
+
+  println(connector) // TODO!
 
   val rootPane = new VBox:
     spacing = 6
