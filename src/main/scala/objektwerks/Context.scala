@@ -5,6 +5,8 @@ import com.typesafe.config.Config
 import scalafx.scene.image.Image
 
 final class Context(config: Config):
+  val connectorModelName = config.getString("connector.modelName")
+  
   val windowTitle = config.getString("window.title")
   val windowWidth = config.getDouble("window.width")
   val windowHeight = config.getDouble("window.height")
