@@ -14,6 +14,6 @@ final class Connector(context: Context):
     .logResponses(true)
     .build()
 
-  def send(topic: String): String =
-    val request = s"Tell me about this beer, $topic"
-    model.chat(request)
+  private val request = context.connectorRequest
+
+  def send(topic: String): String = model.chat( s"$request $topic" )
