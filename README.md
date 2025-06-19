@@ -1,6 +1,6 @@
-LangChain4j
------------
->LangChain4j *beer style* app using OpenAI and Scala 3.
+ScalaFx LangChain4j
+-------------------
+>ScalaFx LangChain4j *beer* app using OpenAI and Scala 3.
 
 >LangChain4j is a classic Java implementation with builders and ***Scala-unfriendly*** annotations.
 
@@ -17,9 +17,6 @@ Build
 Run
 ---
 1. ```sbt run```
->or:
-1. ```sbt "run Pilsner"```
->For now, **must** use a single word beer style, such as: ```sbt "run PaleAle"```
 
 Resources
 ---------
