@@ -16,4 +16,4 @@ final class Connector(context: Context):
 
   private val request = context.connectorRequest
 
-  def send(topic: String): String = model.chat( s"$request $topic" )
+  def send(topic: String): String = model.chat(s"$request $topic")
