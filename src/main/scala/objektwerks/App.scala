@@ -12,6 +12,7 @@ import scalafx.scene.image.Image
 object App extends JFXApp3 with LazyLogging:
   logger.info("Starting app ...")
 
+  val context = Context(ConfigFactory.load("app.conf"))
   val connector = Connector(
     apiKey = sys.env("OPENAI_API_KEY"),
     modelName = "gpt-4o-mini"
