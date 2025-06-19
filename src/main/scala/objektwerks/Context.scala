@@ -7,6 +7,7 @@ import scalafx.scene.image.Image
 final class Context(config: Config):
   val connectorApiKey = sys.env("OPENAI_API_KEY")
   val connectorModelName = config.getString("connector.modelName")
+  val connectorRequest = config.getString("connector.request")
 
   val windowTitle = config.getString("window.title")
   val windowWidth = config.getDouble("window.width")
