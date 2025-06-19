@@ -17,11 +17,10 @@ object App extends JFXApp3 with LazyLogging:
     apiKey = sys.env("OPENAI_API_KEY"),
     modelName = context.connectorModelName
   )
-  println(connector)
 
   override def start(): Unit =
     stage = new JFXApp3.PrimaryStage:
-      scene = View(context).scene
+      scene = View(context, connector).scene
       title = context.windowTitle
       minWidth = context.windowWidth
       minHeight = context.windowHeight
