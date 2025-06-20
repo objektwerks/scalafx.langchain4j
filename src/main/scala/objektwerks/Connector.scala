@@ -4,6 +4,8 @@ import dev.langchain4j.model.openai.OpenAiChatModel
 
 import java.time.Duration
 
+import ox.supervised
+
 final class Connector(context: Context):
   private val model = OpenAiChatModel
     .builder()
@@ -16,4 +18,6 @@ final class Connector(context: Context):
 
   private val request = context.connectorRequest
 
-  def send(topic: String): String = model.chat(s"$request $topic")
+  def send(topic: String): String =
+    supervised:
+      model.chat(s"$request $topic")
