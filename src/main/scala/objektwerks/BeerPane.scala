@@ -5,8 +5,9 @@ import scalafx.geometry.Insets
 import scalafx.scene.control.{Label, TextArea, TextField}
 import scalafx.scene.input.{KeyCode, KeyEvent}
 import scalafx.scene.layout.{Priority, VBox}
+import scalafx.scene.Cursor
 
-final class BeerPane(context: Context, connector: Connector) extends VBox:
+final class BeerPane(view: View, context: Context, connector: Connector) extends VBox:
   val labelBeer = new Label():
     prefHeight = 25
     prefWidth = 50
@@ -17,7 +18,10 @@ final class BeerPane(context: Context, connector: Connector) extends VBox:
     prefWidth = 100
     promptText = context.connectorPrompt
     tooltip = context.connectorPrompt
-    onKeyReleased = (event: KeyEvent) => if event.code == KeyCode.Enter then connector.send(text.value)
+    onKeyReleased = (event: KeyEvent) =>
+      view.scene.cursor = Cursor.Wait
+      if event.code == KeyCode.Enter then connector.send(text.value)
+      view.scene.cursor = Cursor.Default
 
   val labelSummary = new Label():
     prefHeight = 25
