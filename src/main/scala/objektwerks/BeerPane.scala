@@ -16,6 +16,7 @@ final class BeerPane(context: Context, connector: Connector) extends VBox:
     prefHeight = 25
     prefWidth = 100
     promptText = context.connectorPrompt
+    tooltip = context.connectorPrompt
     onKeyReleased = (event: KeyEvent) => if event.code == KeyCode.Enter then connector.send(text.value)
 
   val labelSummary = new Label():
