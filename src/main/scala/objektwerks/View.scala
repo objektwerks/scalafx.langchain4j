@@ -7,7 +7,7 @@ import scalafx.scene.layout.VBox
 final class View(context: Context, connector: Connector): 
   val menu = Menu(context)
 
-  val beerPane = BeerPane(this, context, connector)
+  val beerPane = Pane(this, context, connector)
 
   val rootPane = new VBox:
     spacing = 6

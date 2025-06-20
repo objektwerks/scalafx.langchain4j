@@ -7,7 +7,7 @@ import scalafx.scene.input.{KeyCode, KeyEvent}
 import scalafx.scene.layout.{Priority, VBox}
 import scalafx.scene.Cursor
 
-final class BeerPane(view: View, context: Context, connector: Connector) extends VBox:
+final class Pane(view: View, context: Context, connector: Connector) extends VBox:
   val labelBeer = new Label():
     prefHeight = 25
     prefWidth = 50
