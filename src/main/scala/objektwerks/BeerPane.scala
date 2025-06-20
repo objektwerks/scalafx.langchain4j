@@ -24,7 +24,7 @@ final class BeerPane(context: Context) extends VBox:
   val textSummary = new TextArea():
     prefHeight = 100
     prefWidth = 300
-    text = ""
+    text <== context.summaryProperty
 
   padding = Insets(3, 3, 3, 3)
   spacing = 6
