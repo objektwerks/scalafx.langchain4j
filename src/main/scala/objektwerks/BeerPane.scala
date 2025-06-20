@@ -1,10 +1,12 @@
 package objektwerks
 
+import scalafx.Includes.*
 import scalafx.geometry.Insets
 import scalafx.scene.control.{Label, TextArea, TextField}
+import scalafx.scene.input.{KeyCode, KeyEvent}
 import scalafx.scene.layout.{Priority, VBox}
 
-final class BeerPane(context: Context) extends VBox:
+final class BeerPane(context: Context, connector: Connector) extends VBox:
   val labelBeer = new Label():
     prefHeight = 25
     prefWidth = 50
@@ -14,7 +16,7 @@ final class BeerPane(context: Context) extends VBox:
     prefHeight = 25
     prefWidth = 100
     promptText = "Enter a beer name or style ..."
-    text = ""
+    onKeyReleased = (event: KeyEvent) => if event.code == KeyCode.Enter then connector.send(text.value)
 
   val labelSummary = new Label():
     prefHeight = 25
