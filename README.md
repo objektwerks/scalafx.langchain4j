@@ -1,6 +1,6 @@
 ScalaFx LangChain4j
 -------------------
->ScalaFx LangChain4j *beer* app using OpenAI, Ox and Scala 3.
+>ScalaFx LangChain4j *beer* and *beer style* app using OpenAI, Ox and Scala 3.
 
 >LangChain4j is a classic Java implementation with builders and ***Scala-unfriendly*** annotations.
 
