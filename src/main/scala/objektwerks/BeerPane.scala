@@ -27,6 +27,7 @@ final class BeerPane(context: Context, connector: Connector) extends VBox:
     prefHeight = 600
     prefWidth = 600
     text <== context.summaryProperty
+    wrapText = true
 
   padding = Insets(3, 3, 3, 3)
   spacing = 6
