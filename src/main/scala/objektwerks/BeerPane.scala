@@ -1,7 +1,8 @@
 package objektwerks
 
+import scalafx.geometry.Insets
 import scalafx.scene.control.{Label, TextArea, TextField}
-import scalafx.scene.layout.VBox
+import scalafx.scene.layout.{Priority, VBox}
 
 final class BeerPane(context: Context) extends VBox:
   val labelBeer = new Label():
@@ -24,3 +25,9 @@ final class BeerPane(context: Context) extends VBox:
     prefHeight = 100
     prefWidth = 300
     text = ""
+
+  padding = Insets(3, 3, 3, 3)
+  spacing = 6
+  children = List(labelBeer, textBeer, labelSummary, textSummary)
+
+  VBox.setVgrow(this, Priority.Always)
