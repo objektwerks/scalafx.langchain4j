@@ -2,9 +2,12 @@ package objektwerks
 
 import com.typesafe.config.Config
 
+import scalafx.beans.property.ObjectProperty
 import scalafx.scene.image.Image
 
 final class Context(config: Config):
+  val summaryProperty = ObjectProperty[String]("")
+  
   val connectorApiKey = sys.env("OPENAI_API_KEY")
   val connectorModelName = config.getString("connector.modelName")
   val connectorRequest = config.getString("connector.request")
