@@ -24,8 +24,8 @@ final class BeerPane(context: Context, connector: Connector) extends VBox:
     text = context.labelSummary
 
   val textSummary = new TextArea():
-    prefHeight = 300
-    prefWidth = 300
+    prefHeight = 600
+    prefWidth = 600
     text <== context.summaryProperty
 
   padding = Insets(3, 3, 3, 3)
