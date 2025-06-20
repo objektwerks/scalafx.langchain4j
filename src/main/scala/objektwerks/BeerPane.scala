@@ -20,11 +20,11 @@ final class BeerPane(context: Context, connector: Connector) extends VBox:
 
   val labelSummary = new Label():
     prefHeight = 25
-    prefWidth = 50
+    prefWidth = 75
     text = context.labelSummary
 
   val textSummary = new TextArea():
-    prefHeight = 100
+    prefHeight = 300
     prefWidth = 300
     text <== context.summaryProperty
 
