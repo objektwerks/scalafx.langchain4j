@@ -10,6 +10,7 @@ final class Context(config: Config):
   
   val connectorApiKey = sys.env("OPENAI_API_KEY")
   val connectorModelName = config.getString("connector.modelName")
+  val connectorPrompt = config.getString("connector.prompt")
   val connectorRequest = config.getString("connector.request")
 
   val windowTitle = config.getString("window.title")
