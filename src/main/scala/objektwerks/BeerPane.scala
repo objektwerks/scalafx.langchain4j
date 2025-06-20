@@ -8,3 +8,8 @@ final class BeerPane(context: Context) extends VBox:
     prefHeight = 25
     prefWidth = 50
     text = context.labelBeer
+
+  val labelSummary = new Label():
+    prefHeight = 25
+    prefWidth = 50
+    text = context.labelSummary
