@@ -20,4 +20,6 @@ final class Context(config: Config):
   val menuAbout = config.getString("menu.about")
   val menuExit = config.getString("menu.exit")
 
+  val labelBeer = config.getString("label.beer")
+
   def imageAppIcon: Image = Image(Image.getClass.getResourceAsStream("/icon.png"))
