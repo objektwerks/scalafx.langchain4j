@@ -8,10 +8,10 @@ import scalafx.scene.image.Image
 final class Context(config: Config):
   val summaryProperty = ObjectProperty[String]("")
   
-  val connectorApiKey = sys.env("OPENAI_API_KEY")
-  val connectorModelName = config.getString("connector.modelName")
-  val connectorPrompt = config.getString("connector.prompt")
-  val connectorRequest = config.getString("connector.request")
+  val requestApiKey = sys.env("OPENAI_API_KEY")
+  val requestModelName = config.getString("request.modelName")
+  val requestPrompt = config.getString("request.prompt")
+  val requestWithTopic = config.getString("request.withTopic")
 
   val windowTitle = config.getString("window.title")
   val windowWidth = config.getDouble("window.width")

@@ -18,11 +18,11 @@ final class Pane(view: View,
   val textBeer = new TextField():
     prefHeight = 25
     prefWidth = 100
-    promptText = context.connectorPrompt
-    tooltip = context.connectorPrompt
+    promptText = context.requestPrompt
+    tooltip = context.requestPrompt
     onKeyReleased = (event: KeyEvent) =>
       view.scene.cursor = Cursor.Wait
-      if event.code == KeyCode.Enter then request.sendWithTopic(text.value)
+      if event.code == KeyCode.Enter then request.withTopic(text.value)
       view.scene.cursor = Cursor.Default
 
   val labelSummary = new Label():

@@ -9,15 +9,15 @@ import ox.supervised
 final class Request(context: Context):
   private val model = OpenAiChatModel
     .builder()
-    .apiKey(context.connectorApiKey)
-    .modelName(context.connectorModelName)
+    .apiKey(context.requestApiKey)
+    .modelName(context.requestModelName)
     .timeout(Duration.ofSeconds(30))
     .logRequests(true)
     .logResponses(true)
     .build()
 
-  private val request = context.connectorRequest
+  private val requestWithTopic = context.requestWithTopic
 
-  def sendWithTopic(topic: String): Unit =
+  def withTopic(topic: String): Unit =
     supervised:
-      context.summaryProperty.value = model.chat(s"$request $topic")
+      context.summaryProperty.value = model.chat(s"$requestWithTopic $topic")
