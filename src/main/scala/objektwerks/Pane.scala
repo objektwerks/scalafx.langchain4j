@@ -7,7 +7,9 @@ import scalafx.scene.input.{KeyCode, KeyEvent}
 import scalafx.scene.layout.{Priority, VBox}
 import scalafx.scene.Cursor
 
-final class Pane(view: View, context: Context, connector: Connector) extends VBox:
+final class Pane(view: View,
+                 context: Context,
+                 request: Request) extends VBox:
   val labelBeer = new Label():
     prefHeight = 25
     prefWidth = 50
@@ -20,7 +22,7 @@ final class Pane(view: View, context: Context, connector: Connector) extends VBo
     tooltip = context.connectorPrompt
     onKeyReleased = (event: KeyEvent) =>
       view.scene.cursor = Cursor.Wait
-      if event.code == KeyCode.Enter then connector.sendWithTopic(text.value)
+      if event.code == KeyCode.Enter then request.sendWithTopic(text.value)
       view.scene.cursor = Cursor.Default
 
   val labelSummary = new Label():

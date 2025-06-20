@@ -6,7 +6,7 @@ import java.time.Duration
 
 import ox.supervised
 
-final class Connector(context: Context):
+final class Request(context: Context):
   private val model = OpenAiChatModel
     .builder()
     .apiKey(context.connectorApiKey)
