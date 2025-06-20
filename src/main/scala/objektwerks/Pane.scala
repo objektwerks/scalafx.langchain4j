@@ -20,7 +20,7 @@ final class Pane(view: View, context: Context, connector: Connector) extends VBo
     tooltip = context.connectorPrompt
     onKeyReleased = (event: KeyEvent) =>
       view.scene.cursor = Cursor.Wait
-      if event.code == KeyCode.Enter then connector.send(text.value)
+      if event.code == KeyCode.Enter then connector.sendWithTopic(text.value)
       view.scene.cursor = Cursor.Default
 
   val labelSummary = new Label():
