@@ -1,6 +1,6 @@
 package objektwerks
 
-import scalafx.scene.control.Label
+import scalafx.scene.control.{Label, TextArea}
 import scalafx.scene.layout.VBox
 
 final class BeerPane(context: Context) extends VBox:
@@ -13,3 +13,8 @@ final class BeerPane(context: Context) extends VBox:
     prefHeight = 25
     prefWidth = 50
     text = context.labelSummary
+
+  val textSummary = new TextArea():
+    prefHeight = 100
+    prefWidth = 300
+    text = ""
