@@ -18,6 +18,6 @@ final class Connector(context: Context):
 
   private val request = context.connectorRequest
 
-  def send(topic: String): String =
+  def send(topic: String): Unit =
     supervised:
-      model.chat(s"$request $topic")
+      context.summaryProperty.value = model.chat(s"$request $topic")
