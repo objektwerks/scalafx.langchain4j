@@ -20,4 +20,8 @@ final class Request(context: Context):
 
   def withTopic(topic: String): Unit =
     supervised:
-      context.summaryProperty.value = model.chat(s"$requestWithTopic $topic")
+      val startTime = System.nanoTime
+      val response = model.chat(s"$requestWithTopic $topic")
+      val endTime = System.nanoTime
+      val elapsedTime = (endTime - startTime) / 1e9
+      context.summaryProperty.value = s"*** Elapsed query time: $elapsedTime seconds./n/n$response"
