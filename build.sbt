@@ -1,6 +1,6 @@
 name := "scalafx.langchain4j"
 organization := "objektwerks"
-version := "3.0.0"
+version := "4.0.0"
 scalaVersion := "3.6.4"
 libraryDependencies ++= {
   val langchain4jVersion = "1.0.1"
