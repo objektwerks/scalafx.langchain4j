@@ -1,7 +1,7 @@
 name := "scalafx.langchain4j"
 organization := "objektwerks"
 version := "4.0.0"
-scalaVersion := "3.6.4"
+scalaVersion := "3.7.2-RC1"
 libraryDependencies ++= {
   val langchain4jVersion = "1.0.1"
   Seq(
@@ -15,5 +15,7 @@ libraryDependencies ++= {
   )
 }
 scalacOptions ++= Seq(
-  "-Wunused:all"
+  "-Wunused:all",
+  // Silences 3.7.0+ implicit using warnings:
+  "-Wconf:msg=Implicit parameters should be provided with a `using` clause:s"
 )
