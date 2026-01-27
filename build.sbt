@@ -1,7 +1,7 @@
 name := "scalafx.langchain4j"
 organization := "objektwerks"
 version := "4.0.0"
-scalaVersion := "3.8.0-RC6"
+scalaVersion := "3.8.1"
 libraryDependencies ++= {
   val langchain4jVersion = "1.10.0"
   Seq(
