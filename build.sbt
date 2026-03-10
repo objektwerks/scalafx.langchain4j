@@ -3,7 +3,7 @@ organization := "objektwerks"
 version := "4.0.0"
 scalaVersion := "3.8.3-RC1"
 libraryDependencies ++= {
-  val langchain4jVersion = "1.11.0"
+  val langchain4jVersion = "1.12.1"
   Seq(
     "org.scalafx" %% "scalafx" % "25.0.2-R37",
     "dev.langchain4j" % "langchain4j" % langchain4jVersion,
