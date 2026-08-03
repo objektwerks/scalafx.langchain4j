@@ -11,7 +11,7 @@ libraryDependencies ++= {
     "com.softwaremill.ox" %% "core" % "1.0.6",
     "com.typesafe" % "config" % "1.4.3",
     "com.typesafe.scala-logging" %% "scala-logging" % "3.9.5",
-    "ch.qos.logback" % "logback-classic" % "1.5.32"
+    "ch.qos.logback" % "logback-classic" % "1.5.38"
   )
 }
 scalacOptions ++= Seq(
