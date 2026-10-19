@@ -5,7 +5,7 @@ scalaVersion := "3.9.0"
 libraryDependencies ++= {
   val langchain4jVersion = "1.13.0"
   Seq(
-    "org.scalafx" %% "scalafx" % "26.0.0-R38",
+    "org.scalafx" %% "scalafx" % "27.0.0-R39",
     "dev.langchain4j" % "langchain4j" % langchain4jVersion,
     "dev.langchain4j" % "langchain4j-open-ai" % langchain4jVersion,
     "com.softwaremill.ox" %% "core" % "1.0.9",
